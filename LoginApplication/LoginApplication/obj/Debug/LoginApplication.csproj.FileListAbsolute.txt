@@ -1,0 +1,10 @@
+C:\Users\Admin\source\repos\LoginApplication\LoginApplication\bin\Debug\LoginApplication.exe.config
+C:\Users\Admin\source\repos\LoginApplication\LoginApplication\bin\Debug\LoginApplication.exe
+C:\Users\Admin\source\repos\LoginApplication\LoginApplication\bin\Debug\LoginApplication.pdb
+C:\Users\Admin\source\repos\LoginApplication\LoginApplication\obj\Debug\LoginApplication.csprojResolveAssemblyReference.cache
+C:\Users\Admin\source\repos\LoginApplication\LoginApplication\obj\Debug\LoginApplication.FormLogin.resources
+C:\Users\Admin\source\repos\LoginApplication\LoginApplication\obj\Debug\LoginApplication.Properties.Resources.resources
+C:\Users\Admin\source\repos\LoginApplication\LoginApplication\obj\Debug\LoginApplication.csproj.GenerateResource.Cache
+C:\Users\Admin\source\repos\LoginApplication\LoginApplication\obj\Debug\LoginApplication.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\LoginApplication\LoginApplication\obj\Debug\LoginApplication.exe
+C:\Users\Admin\source\repos\LoginApplication\LoginApplication\obj\Debug\LoginApplication.pdb
