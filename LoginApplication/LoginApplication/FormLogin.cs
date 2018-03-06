@@ -21,8 +21,7 @@ namespace MenuManagerApplication
         
         public FormLogin()
         {
-            con.ConnectionString = "Data Source=Thuat-PC\\SQLEXPRESS;Initial Catalog=Restaurant;Integrated Security=True";
-
+           
             InitializeComponent();
             Button1.Click += Button1_Click;
 
