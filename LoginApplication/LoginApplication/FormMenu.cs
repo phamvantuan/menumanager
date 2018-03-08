@@ -51,6 +51,7 @@ namespace MenuManagerApplication
             {
                 lgvMenu.DataSource = null;
                 btnDeleteMenu.Visible = false;
+                btnPrint.Hide();
             }
            
         }
