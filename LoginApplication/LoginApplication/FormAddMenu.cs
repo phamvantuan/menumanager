@@ -14,7 +14,6 @@ namespace MenuManagerApplication
 {
     public partial class FormAddMenu : Form
     {
-        
         private FormMenu fmenu;
         public FormAddMenu(FormMenu fmenu)
         {
@@ -24,30 +23,27 @@ namespace MenuManagerApplication
        
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string name = txtName.Text.Trim().ToString();
-            string price = txtPrice.Text.Trim().ToString();
-            string date = choseDate.Value.ToString("yyyy-MM-dd");
-            
-            string dateSelect = fmenu.dateMenu.Value.ToString("yyyy-MM-dd");
-            
-            try
+            string name = txtName.Text.ToString().Trim();
+            string price = txtPrice.Text.ToString().Trim();
+
+            int n;
+            bool isNumeric = int.TryParse(price, out n);
+          
+            if (name.Length <= 0 || price.Length <= 0)
             {
+                MessageBox.Show("Data is not empty!");
+            }
+            else if (!isNumeric)
+            {
+                MessageBox.Show("Price invalid!");
+            }
+            else
+            {
+                string date = choseDate.Value.ToString("yyyy-MM-dd");
                 string query = "INSERT INTO [Restaurant].[dbo].[menu]([menu].[name],[menu].[price],[menu].[created]) VALUES('" + name + "','" + price + "','" + date + "')";
                 DataProvider.Instance.ExecuteNonQuery(query);
                 this.Close();
-
-                string query1 = "select [id],[name],[price] from [menu] where created = '" + dateSelect + "' ";
-
-                DataTable data = DataProvider.Instance.ExecuteQuery(query1);
-               
-                fmenu.lgvMenu.DataSource = data;
-                fmenu.lgvMenu.Columns["id"].Visible = false;
-                fmenu.btnDeleteMenu.Visible = true;
-            }
-            catch
-            {
-                //Error when save data
-                MessageBox.Show("Error to save on database");
+                fmenu.loadData(true);
             }
         }
     }

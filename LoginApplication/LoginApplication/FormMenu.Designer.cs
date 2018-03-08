@@ -34,6 +34,7 @@
             this.dateMenu = new System.Windows.Forms.DateTimePicker();
             this.btnPrint = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.btnLogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.lgvMenu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,17 +86,31 @@
             this.btnPrint.TabIndex = 5;
             this.btnPrint.Text = "Print Menu";
             this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Visible = false;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // printDocument1
             // 
             this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLogout.Location = new System.Drawing.Point(766, 12);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(95, 34);
+            this.btnLogout.TabIndex = 6;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(873, 438);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.dateMenu);
             this.Controls.Add(this.btnDeleteMenu);
@@ -115,7 +130,8 @@
         public System.Windows.Forms.DataGridView lgvMenu;
         public System.Windows.Forms.Button btnDeleteMenu;
         public System.Windows.Forms.DateTimePicker dateMenu;
-        private System.Windows.Forms.Button btnPrint;
+        public System.Windows.Forms.Button btnPrint;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

@@ -27,7 +27,7 @@ namespace MenuManagerApplication
         
         public string UID { get; private set; }
 
-         void loadData(bool isCheckAdmin)
+        public void loadData(bool isCheckAdmin)
         {
             string theDate = dateMenu.Value.ToString("yyyy-MM-dd");
             
@@ -44,14 +44,18 @@ namespace MenuManagerApplication
 
             if (data.Rows.Count > 0)
             {
+            
                 lgvMenu.DataSource = data;
                 lgvMenu.Columns["id"].Visible = false;
+                btnPrint.Visible = true;
+                btnDeleteMenu.Visible = true;
             }
             else
             {
                 lgvMenu.DataSource = null;
+                btnPrint.Visible = false;
                 btnDeleteMenu.Visible = false;
-                btnPrint.Hide();
+                
             }
            
         }
@@ -205,6 +209,13 @@ namespace MenuManagerApplication
 
             Bitmap bm = new Bitmap(width,height);
             return bm;
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormLogin frmLogin = new FormLogin();
+            frmLogin.ShowDialog();
         }
     }
 }
