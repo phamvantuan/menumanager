@@ -60,9 +60,9 @@ namespace MenuManagerApplication
         {
 
             FormAddMenu frmAddMenu = new FormAddMenu(this);
-            {
-                frmAddMenu.Show();
-            }
+            frmAddMenu.choseDate.Value = this.dateMenu.Value;
+            frmAddMenu.Show();
+            
             
         }
 
