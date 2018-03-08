@@ -196,11 +196,11 @@ namespace MenuManagerApplication
             height += lgvMenu.ColumnHeadersHeight;
 
             int width = 0;
+          
             foreach (DataGridViewColumn col in lgvMenu.Columns)
             {
-                width += col.Width;
+                    width += col.Width;
             }
-            width += lgvMenu.RowHeadersWidth;
 
             Bitmap bm = new Bitmap(width,height);
             return bm;
