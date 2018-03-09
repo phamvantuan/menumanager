@@ -47,6 +47,7 @@ namespace MenuManagerApplication
             
                 lgvMenu.DataSource = data;
                 lgvMenu.Columns["id"].Visible = false;
+                //lgvMenu.Columns["price"].
                 btnPrint.Visible = true;
                 btnDeleteMenu.Visible = true;
             }
@@ -87,13 +88,16 @@ namespace MenuManagerApplication
         {
             if (_typeUser == (int)UserType.UserTypes.Admin)
             {
+
+                
                 int id = 0;
                 int price = 0;
                 string name = null;
                 bool IsUpdateOrInsert = false;
 
                 string columnName = lgvMenu.Columns[e.ColumnIndex].HeaderText;
-                
+               
+
                 if (!string.IsNullOrEmpty(lgvMenu["id", e.RowIndex].Value.ToString()))
                 {
                     id = (int)lgvMenu["id", e.RowIndex].Value;
@@ -123,17 +127,51 @@ namespace MenuManagerApplication
                 catch
                 {
                     //Error when save data
-                    MessageBox.Show("Error to save on database");
+                    MessageBox.Show("Error to save on database.");
                 }
             }
             else
             {
                 loadData(false);
-                MessageBox.Show("You don't have permission update");
+                MessageBox.Show("You don't have permission update.");
             }
             
         }
 
+        bool isColPriceEdit = false;
+        private void lgvMenu_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            string columnName = lgvMenu.Columns[dgv.CurrentCell.ColumnIndex].HeaderText;
+            isColPriceEdit = false;
+            if (columnName == "price")
+            {
+                isColPriceEdit = true;
+
+            }
+            DataGridViewTextBoxEditingControl tb = (DataGridViewTextBoxEditingControl)e.Control;
+            tb.KeyPress += new KeyPressEventHandler(dataGridViewTextBox_KeyPress);
+
+            e.Control.KeyPress += new KeyPressEventHandler(dataGridViewTextBox_KeyPress);
+        }
+
+
+        private void dataGridViewTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (isColPriceEdit)
+            {
+                if (!char.IsDigit(e.KeyChar))
+                {
+                    e.Handled = true;
+                }
+            }
+            else
+            {
+                e.Handled = false;
+            }
+        }
+        
         private void btnDeleteMenu_Click(object sender, EventArgs e)
         {
             
@@ -143,10 +181,10 @@ namespace MenuManagerApplication
                 if (dialogResult == DialogResult.Yes)
                 {
 
-                    int rowIndex = lgvMenu.CurrentCell.RowIndex;
+                    
                     int id = 0;
 
-                    id = (int)lgvMenu.Rows[rowIndex].Cells["id"].Value;
+                    id = (int)lgvMenu.Rows[lgvMenu.CurrentCell.RowIndex].Cells["id"].Value;
                     try
                     {
                         if (id > 0)
@@ -217,5 +255,6 @@ namespace MenuManagerApplication
             FormLogin frmLogin = new FormLogin();
             frmLogin.ShowDialog();
         }
+        
     }
 }

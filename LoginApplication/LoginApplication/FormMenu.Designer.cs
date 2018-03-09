@@ -57,6 +57,7 @@
             this.lgvMenu.Size = new System.Drawing.Size(763, 309);
             this.lgvMenu.TabIndex = 1;
             this.lgvMenu.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.lgvMenu_CellValueChanged);
+            this.lgvMenu.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.lgvMenu_EditingControlShowing);
             this.lgvMenu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lgvMenu_KeyDown);
             // 
             // btnDeleteMenu
