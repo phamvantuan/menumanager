@@ -35,6 +35,7 @@
             this.btnPrint = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnCreateReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.lgvMenu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +82,7 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(597, 23);
+            this.btnPrint.Location = new System.Drawing.Point(574, 23);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(75, 23);
             this.btnPrint.TabIndex = 5;
@@ -106,11 +107,22 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // btnCreateReport
+            // 
+            this.btnCreateReport.Location = new System.Drawing.Point(655, 23);
+            this.btnCreateReport.Name = "btnCreateReport";
+            this.btnCreateReport.Size = new System.Drawing.Size(94, 23);
+            this.btnCreateReport.TabIndex = 7;
+            this.btnCreateReport.Text = "Create report";
+            this.btnCreateReport.UseVisualStyleBackColor = true;
+            this.btnCreateReport.Click += new System.EventHandler(this.btnCreateReport_Click);
+            // 
             // FormMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(873, 438);
+            this.Controls.Add(this.btnCreateReport);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.dateMenu);
@@ -134,5 +146,6 @@
         public System.Windows.Forms.Button btnPrint;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnCreateReport;
     }
 }

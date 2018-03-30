@@ -255,6 +255,12 @@ namespace MenuManagerApplication
             FormLogin frmLogin = new FormLogin();
             frmLogin.ShowDialog();
         }
-        
+
+        private void btnCreateReport_Click(object sender, EventArgs e)
+        {
+            string dateReport = dateMenu.Value.ToString("yyyy-MM-dd");
+            ReportForm frmReport = new ReportForm(dateReport);
+            frmReport.Show();
+        }
     }
 }
