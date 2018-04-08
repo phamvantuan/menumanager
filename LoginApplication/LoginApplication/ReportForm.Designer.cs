@@ -70,6 +70,7 @@
             this.viewer1.Sidebar.Width = 200;
             this.viewer1.Size = new System.Drawing.Size(708, 483);
             this.viewer1.TabIndex = 0;
+            this.viewer1.Load += new System.EventHandler(this.ReportForm_Load);
             // 
             // ReportForm
             // 

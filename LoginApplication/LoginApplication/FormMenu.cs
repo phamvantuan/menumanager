@@ -35,27 +35,27 @@ namespace MenuManagerApplication
 
             if (isCheckAdmin)
             {
-                if (_typeUser == (int)UserType.UserTypes.Admin)
+                if (_typeUser != (int)UserType.UserTypes.Admin)
                 {
-                    btnAddMenu.Visible = true;
-                    btnDeleteMenu.Visible = true;
+                    btnPrint.Visible = false;
+                    btnDeleteMenu.Visible = false;
+                    btnCreateReport.Visible = false;
+                    btnAddMenu.Visible = false;
                 }
             }
 
             if (data.Rows.Count > 0)
-            {
-            
+            { 
                 lgvMenu.DataSource = data;
                 lgvMenu.Columns["id"].Visible = false;
-                //lgvMenu.Columns["price"].
-                btnPrint.Visible = true;
-                btnDeleteMenu.Visible = true;
+           
             }
             else
             {
                 lgvMenu.DataSource = null;
                 btnPrint.Visible = false;
                 btnDeleteMenu.Visible = false;
+                btnCreateReport.Visible = false;
                 
             }
            

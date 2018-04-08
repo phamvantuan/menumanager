@@ -68,7 +68,6 @@
   <ItemGroup>
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
-    <Compile Include="DebugTable.cs" />
     <Compile Include="FormAddMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,9 +126,6 @@
       <DependentUpon>ReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
-    <None Include="MenuReport.rdlx">
-      <SubType>Component</SubType>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -150,6 +146,7 @@
     <None Include="RestaurantDataSet.xss">
       <DependentUpon>RestaurantDataSet.xsd</DependentUpon>
     </None>
+    <None Include="SalesDashboard.rdlx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

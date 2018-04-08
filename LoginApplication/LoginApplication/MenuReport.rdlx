@@ -7,175 +7,34 @@
 				<Pages>
 					<Page>
 						<ReportItems>
-							<Table Name="Table1">
-								<DataSetName>DataSet1</DataSetName>
-								<Header>
-									<TableRows>
-										<TableRow>
-											<Height>0.732015cm</Height>
-											<TableCells>
-												<TableCell>
-													<ReportItems>
-														<Textbox Name="TextBox1">
-															<Value>name</Value>
-															<Style>
-																<PaddingBottom>2pt</PaddingBottom>
-																<PaddingLeft>2pt</PaddingLeft>
-																<PaddingRight>2pt</PaddingRight>
-																<PaddingTop>2pt</PaddingTop>
-															</Style>
-														</Textbox>
-													</ReportItems>
-												</TableCell>
-												<TableCell>
-													<ReportItems>
-														<Textbox Name="TextBox2">
-															<Value>price</Value>
-															<Style>
-																<PaddingBottom>2pt</PaddingBottom>
-																<PaddingLeft>2pt</PaddingLeft>
-																<PaddingRight>2pt</PaddingRight>
-																<PaddingTop>2pt</PaddingTop>
-																<TextAlign>Right</TextAlign>
-															</Style>
-														</Textbox>
-													</ReportItems>
-												</TableCell>
-												<TableCell>
-													<ReportItems>
-														<Textbox Name="TextBox3">
-															<Value>created</Value>
-															<Style>
-																<PaddingBottom>2pt</PaddingBottom>
-																<PaddingLeft>2pt</PaddingLeft>
-																<PaddingRight>2pt</PaddingRight>
-																<PaddingTop>2pt</PaddingTop>
-																<TextAlign>Right</TextAlign>
-															</Style>
-														</Textbox>
-													</ReportItems>
-												</TableCell>
-											</TableCells>
-										</TableRow>
-									</TableRows>
-								</Header>
-								<Details>
-									<TableRows>
-										<TableRow>
-											<Height>0.732015cm</Height>
-											<TableCells>
-												<TableCell>
-													<ReportItems>
-														<Textbox Name="TextBox4">
-															<Value>=Fields!name.Value</Value>
-															<Style>
-																<PaddingBottom>2pt</PaddingBottom>
-																<PaddingLeft>2pt</PaddingLeft>
-																<PaddingRight>2pt</PaddingRight>
-																<PaddingTop>2pt</PaddingTop>
-															</Style>
-														</Textbox>
-													</ReportItems>
-												</TableCell>
-												<TableCell>
-													<ReportItems>
-														<Textbox Name="TextBox5">
-															<Value>=Fields!price.Value</Value>
-															<Style>
-																<PaddingBottom>2pt</PaddingBottom>
-																<PaddingLeft>2pt</PaddingLeft>
-																<PaddingRight>2pt</PaddingRight>
-																<PaddingTop>2pt</PaddingTop>
-																<TextAlign>Right</TextAlign>
-															</Style>
-														</Textbox>
-													</ReportItems>
-												</TableCell>
-												<TableCell>
-													<ReportItems>
-														<Textbox Name="TextBox6">
-															<Value>=Fields!created.Value</Value>
-															<Style>
-																<PaddingBottom>2pt</PaddingBottom>
-																<PaddingLeft>2pt</PaddingLeft>
-																<PaddingRight>2pt</PaddingRight>
-																<PaddingTop>2pt</PaddingTop>
-																<TextAlign>Right</TextAlign>
-															</Style>
-														</Textbox>
-													</ReportItems>
-												</TableCell>
-											</TableCells>
-										</TableRow>
-									</TableRows>
-								</Details>
-								<Footer>
-									<TableRows>
-										<TableRow>
-											<Height>0.732015cm</Height>
-											<TableCells>
-												<TableCell>
-													<ReportItems>
-														<Textbox Name="TextBox7">
-															<Value />
-															<Style>
-																<PaddingBottom>2pt</PaddingBottom>
-																<PaddingLeft>2pt</PaddingLeft>
-																<PaddingRight>2pt</PaddingRight>
-																<PaddingTop>2pt</PaddingTop>
-															</Style>
-														</Textbox>
-													</ReportItems>
-												</TableCell>
-												<TableCell>
-													<ReportItems>
-														<Textbox Name="TextBox8">
-															<Value />
-															<Style>
-																<PaddingBottom>2pt</PaddingBottom>
-																<PaddingLeft>2pt</PaddingLeft>
-																<PaddingRight>2pt</PaddingRight>
-																<PaddingTop>2pt</PaddingTop>
-															</Style>
-														</Textbox>
-													</ReportItems>
-												</TableCell>
-												<TableCell>
-													<ReportItems>
-														<Textbox Name="TextBox9">
-															<Value />
-															<Style>
-																<PaddingBottom>2pt</PaddingBottom>
-																<PaddingLeft>2pt</PaddingLeft>
-																<PaddingRight>2pt</PaddingRight>
-																<PaddingTop>2pt</PaddingTop>
-															</Style>
-														</Textbox>
-													</ReportItems>
-												</TableCell>
-											</TableCells>
-										</TableRow>
-									</TableRows>
-								</Footer>
-								<Height>2.2cm</Height>
-								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">22cm</dd:FixedHeight>
-								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">0cm</dd:FixedWidth>
-								<Style />
-								<TableColumns>
-									<TableColumn>
-										<Width>5.328472cm</Width>
-									</TableColumn>
-									<TableColumn>
-										<Width>5.335764cm</Width>
-									</TableColumn>
-									<TableColumn>
-										<Width>5.335764cm</Width>
-									</TableColumn>
-								</TableColumns>
-								<Top>0.2cm</Top>
-								<Width>16cm</Width>
+							<Textbox Name="TextBox1">
+								<Height>0.75cm</Height>
+								<Left>4.8cm</Left>
+								<Value>=Fields!name.Value</Value>
+								<Style>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>1.8cm</Top>
+								<Width>2.5cm</Width>
 								<ZIndex>1</ZIndex>
-							</Table>
+							</Textbox>
+							<Textbox Name="TextBox2">
+								<Height>0.75cm</Height>
+								<Left>7.858125cm</Left>
+								<Value>=Fields!price.Value</Value>
+								<Style>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<Top>1.799167cm</Top>
+								<Width>2.5cm</Width>
+								<ZIndex>2</ZIndex>
+							</Textbox>
 						</ReportItems>
 						<Style />
 					</Page>
@@ -209,13 +68,9 @@
 				<Field Name="price">
 					<DataField>price</DataField>
 				</Field>
-				<Field Name="created">
-					<DataField>created</DataField>
-				</Field>
 			</Fields>
 			<Query>
-				<CommandText>select dbo.menu.name, dbo.menu.price, dbo.menu.created
-from dbo.menu</CommandText>
+				<CommandText />
 				<DataSourceName>DataSource1</DataSourceName>
 			</Query>
 		</DataSet>

@@ -47,7 +47,6 @@
             this.btnAddMenu.TabIndex = 0;
             this.btnAddMenu.Text = "Add Menu";
             this.btnAddMenu.UseVisualStyleBackColor = true;
-            this.btnAddMenu.Visible = false;
             this.btnAddMenu.Click += new System.EventHandler(this.btnAddMenu_Click);
             // 
             // lgvMenu
@@ -69,7 +68,6 @@
             this.btnDeleteMenu.TabIndex = 3;
             this.btnDeleteMenu.Text = "Delete Menu";
             this.btnDeleteMenu.UseVisualStyleBackColor = true;
-            this.btnDeleteMenu.Visible = false;
             this.btnDeleteMenu.Click += new System.EventHandler(this.btnDeleteMenu_Click);
             // 
             // dateMenu
@@ -88,7 +86,6 @@
             this.btnPrint.TabIndex = 5;
             this.btnPrint.Text = "Print Menu";
             this.btnPrint.UseVisualStyleBackColor = true;
-            this.btnPrint.Visible = false;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // printDocument1
